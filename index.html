@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title></title>
+<title>Tips Chart Generator</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,20 +18,31 @@
   <h1>Tips Chart Generator</h1>
 </header>
 
-<div id='Main'>
+<div id="main">
 
-  <ul>
+  <ul class="chartInfo">
+    <li><span>Range of Days</span></li>
+    <li><input id="range" type="date"></li>
+    <li><span>Quantity of Tips Pool</span></li>
+    <li><input id="quantity"></li>
+  </ul>
+
+  <ul class="memberInfo hidden">
     <li><span>Team Member's Name</span></li>
     <li><input></li>
     <li><span>Hours Worked</span></li>
     <li><input></li>
-    <li><span>Range of Days</span></li>
-    <li><input></li>
-    <li><span>Quantity of Pool</span></li>
-    <li><input></li>
-    <li><span>Notes for Team</span></li>
+  </ul>
+
+  <ul class="notes hidden">
+    <li><span>Notes For The Team</span></li>
     <li><input></li>
   </ul>
+
+  <div id="buttons">
+    <a href="#" id="next" class="button">Next</a>
+    <a href="#" id="done" class="button hidden">Done</a>
+  </div>
 
 </div>
 

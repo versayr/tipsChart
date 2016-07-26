@@ -61,9 +61,40 @@ textarea {
 Author's custom styles
 ========================================================================== */
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+#main {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
 
+#main ul {
+  list-style: none;
+  padding: 0;
+}
 
+.button {
+  text-decoration: none;
+  color: black;
+  padding: 4px;
+  background: yellow;
+  border-bottom: 4px solid grey;
+  transition: border 0.3s;
+  width: 100px;
+}
+.button:hover {
+  border-bottom: 4px solid black;
+}
+
+input {
+  width: 100%;
+}
 
 
 
