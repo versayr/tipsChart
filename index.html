@@ -21,10 +21,33 @@
 <div id="main">
 
   <ul class="chartInfo">
-    <li><span>Range of Days</span></li>
-    <li><input id="range" type="date"></li>
-    <li><span>Quantity of Tips Pool</span></li>
-    <li><input id="quantity"></li>
+    <li><span>Beginning of Week</span></li>
+    <li>
+    <select id="rangeMonth" name="month">
+      <option selected disabled>Month</option>
+      <!-- Maybe reconsider optgroup here? Better solution is possible -->
+      <optgroup>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>October</option>
+        <option>September</option>
+        <option>November</option>
+        <option>December</option>
+      </optgroup>
+    </select>
+    </li>
+    <li>
+    <select id="rangeDay" name="day" class="hidden">
+    </select>
+    </li>
+    <li><span class="hidden">Quantity of Tips Pool</span></li>
+    <li><input id="quantity" class="hidden"></li>
   </ul>
 
   <ul class="memberInfo hidden">
@@ -40,6 +63,7 @@
   </ul>
 
   <div id="buttons">
+    <a href="#" id="back" class="button hidden">Next</a>
     <a href="#" id="next" class="button">Next</a>
     <a href="#" id="done" class="button hidden">Done</a>
   </div>
