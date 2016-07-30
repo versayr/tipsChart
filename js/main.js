@@ -14,6 +14,9 @@ function howManyDays(month) {
   // alert('How many days are in ' + month + '?');
 };
 
+function printChart() {
+};
+
 $(document).ready(function() {
   $('.button#next').click(function() {
   
@@ -28,6 +31,7 @@ $(document).ready(function() {
     // Maybe look at the selector that isn't hidden?
     // Or something like that.
     // MAYBE PUT A MARKER ON THE CURRENT SELECTOR
+    /*
     var currentMonth = $('#rangeMonth').find(':selected').text();
     if (currentMonth != 'Month') {
       $('#rangeMonth').addClass('hidden');
@@ -37,8 +41,8 @@ $(document).ready(function() {
       howManyDays(currentMonth);
       $('#rangeDay').toggleClass('hidden');
       $('#back').toggleClass('hidden');
+      */
       
-      // Add a back button
     };
   });
 });

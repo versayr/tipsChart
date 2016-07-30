@@ -83,12 +83,13 @@ h1 {
 
 #main {
   width: 400px;
-  height: 400px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
   padding: 5px;
   background: #5668c7;
+  margin-bottom: 20px;
 }
 
 #main ul {
