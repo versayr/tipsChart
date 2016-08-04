@@ -8,13 +8,22 @@ var employees = [{firstName: 'Martha', lastName: 'Griem', hours: 38.52},{firstna
 // - Last
 // Hours Worked
 
+function printChart() {
+  for (object in employees) {
+    $('#tipsChart').append('<div class="employeeRow">' +
+        '<span>' + employees.i[0] + '</span>' +
+        '<span>' + employees.i[1] + '</span>' +
+        '<span>' + employees.i[2] + '</span>' +
+        '<span>' + employees.i[3] + '</span>' +
+        '<span>     </span>' +
+        '</div>');
+  };
+};
+
 // A function that takes a month and gives a number of days to put in the
 // #rangeDay selector
 function howManyDays(month) {
   // alert('How many days are in ' + month + '?');
-};
-
-function printChart() {
 };
 
 $(document).ready(function() {
