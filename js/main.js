@@ -9,12 +9,12 @@ var employees = [{firstName: 'Martha', lastName: 'Griem', hours: 38.52},{firstna
 // Hours Worked
 
 function printChart() {
-  for (object in employees) {
+  for (i = 0; i < employees.length; i++) {
     $('#tipsChart').append('<div class="employeeRow">' +
-        '<span>' + employees.i[0] + '</span>' +
-        '<span>' + employees.i[1] + '</span>' +
-        '<span>' + employees.i[2] + '</span>' +
-        '<span>' + employees.i[3] + '</span>' +
+        '<span>' + employees[i].0 + '</span>' +
+        '<span>' + employees[i].1 + '</span>' +
+        '<span>' + employees[i].2 + '</span>' +
+        '<span>' + employees[i].3 + '</span>' +
         '<span>     </span>' +
         '</div>');
   };
@@ -27,31 +27,25 @@ function howManyDays(month) {
 };
 
 $(document).ready(function() {
-  $('.button#next').click(function() {
-  
-    beginMonth
-
-    beginDay
-    
-    endMonth
-
-    endDay
-    
-    // Maybe look at the selector that isn't hidden?
-    // Or something like that.
-    // MAYBE PUT A MARKER ON THE CURRENT SELECTOR
-    /*
-    var currentMonth = $('#rangeMonth').find(':selected').text();
-    if (currentMonth != 'Month') {
-      $('#rangeMonth').addClass('hidden');
-      // INSERT A SPAN WITH THE SELECTED TEXT FROM RANGEMONTH
-      $('#tipsChart').append('<span>' + currentMonth + '</span>');
-      // alert('Show dates selector for that month, lock month selector');
-      howManyDays(currentMonth);
-      $('#rangeDay').toggleClass('hidden');
-      $('#back').toggleClass('hidden');
-      */
-      
-    };
+  $('.button#printChart').click(function() {
+    printChart();
   });
+  // $('.button#next').click(function() {
+
+  // Maybe look at the selector that isn't hidden?
+  // Or something like that.
+  // MAYBE PUT A MARKER ON THE CURRENT SELECTOR
+  /*
+     var currentMonth = $('#rangeMonth').find(':selected').text();
+     if (currentMonth != 'Month') {
+     $('#rangeMonth').addClass('hidden');
+  // INSERT A SPAN WITH THE SELECTED TEXT FROM RANGEMONTH
+  $('#tipsChart').append('<span>' + currentMonth + '</span>');
+  // alert('Show dates selector for that month, lock month selector');
+  howManyDays(currentMonth);
+  $('#rangeDay').toggleClass('hidden');
+  $('#back').toggleClass('hidden');
+  */
+
+  //});
 });
