@@ -1,6 +1,7 @@
 var range = undefined;
 var quantity = undefined;
-var employees = [{firstName: 'Martha', lastName: 'Griem', hours: 38.52},{firstname: 'Bruce', lastName: 'Manning', hours: 55.12}];
+var employees = [{firstName: 'Martha', lastName: 'Griem', hours: 38.52},{firstName: 'Bruce', lastName: 'Manning', hours: 55.12}];
+var tips = 150.00
 
 // an employee will be an object containing:
 // Name
@@ -9,12 +10,17 @@ var employees = [{firstName: 'Martha', lastName: 'Griem', hours: 38.52},{firstna
 // Hours Worked
 
 function printChart() {
+  var p;
+  p = $('.titleRow').detach();
+  $('#tipsChart').empty();
+  p.appendTo('#tipsChart');
+  p = null;
   for (i = 0; i < employees.length; i++) {
     $('#tipsChart').append('<div class="employeeRow">' +
-        '<span>' + employees[i].0 + '</span>' +
-        '<span>' + employees[i].1 + '</span>' +
-        '<span>' + employees[i].2 + '</span>' +
-        '<span>' + employees[i].3 + '</span>' +
+        '<span>' + employees[i].firstName + '</span>' +
+        '<span>' + employees[i].lastName + '</span>' +
+        '<span>' + employees[i].hours + '</span>' +
+        '<span>' + '$' + tips + '</span>' +
         '<span>     </span>' +
         '</div>');
   };
