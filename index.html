@@ -142,22 +142,18 @@
       <li><input id="quantity" class=""></li>
     </ul>
 
-    <ul class="memberInfo ">
-      <li><span>Team Member's Name</span></li>
-      <li><input></li>
-      <li><span>Hours Worked</span></li>
-      <li><input></li>
-    </ul>
-
     <ul class="notes ">
       <li><span>Notes For The Team</span></li>
       <li><input></li>
     </ul>
 
     <div id="buttons">
+      <!--
       <a href="#" id="back" class="button ">Back</a>
       <a href="#" id="next" class="button">Next</a>
       <a href="#" id="done" class="button ">Done</a>
+      -->
+      <a href="#" id="newEmployee" class="button">Add An Employee</a>
       <a href="#" id="printChart" class="button">printChart</a>
     </div>
   </div>
@@ -172,6 +168,18 @@
     </div>
   </div>
 
+</div>
+
+<div id="shade"></div>
+<div id="modal">
+  <ul class="memberInfo">
+    <li><span>Team Member's Name</span></li>
+    <li><input></li>
+    <li><span>Hours Worked</span></li>
+    <li><input></li>
+    <li><a href="#" class="button">Submit</a></li>
+    <li><a href="#" class="button">X</a></li>
+  </ul>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

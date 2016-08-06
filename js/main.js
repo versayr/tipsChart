@@ -9,6 +9,11 @@ var tips = 150.00
 // - Last
 // Hours Worked
 
+function newEmployee() {
+  $('#modal').css('display', 'block');
+  $('#shade').css('display', 'block');
+};
+
 function printChart() {
   var p;
   p = $('.titleRow').detach();
@@ -33,6 +38,9 @@ function howManyDays(month) {
 };
 
 $(document).ready(function() {
+  $('.button#newEmployee').click(function() {
+    newEmployee();
+  });
   $('.button#printChart').click(function() {
     printChart();
   });
