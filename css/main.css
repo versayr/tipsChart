@@ -114,6 +114,11 @@ ul {
 #titleRow {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+#titleRow div {
+  width: 20%;
 }
 
 .button {
