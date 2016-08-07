@@ -69,15 +69,25 @@ body {
   background: #A2A3B3;
 }
 
+header {
+  display: flex;
+}
+
 h1 {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #386647;
-  width: 700px;
+  width: 400px;
   height: 100px;
   color: black;
   margin: 0;
+  margin-top: 20px;
+}
+
+#buttons {
+  width: 300px;
+  height: 100px;
   margin-top: 20px;
 }
 
@@ -91,25 +101,19 @@ ul {
   padding: 0;
 }
 
-#prompts {
-  width: 200px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  padding: 5px;
-  background: #5668c7;
-  margin-bottom: 20px;
-}
-
 #tipsChart {
-  width: 500px;
+  width: 700px;
   height: 500px;
   display: flex;
   flex-direction: column;
   border: none;
   padding: 5px;
   background: #5668c7;
+}
+
+#titleRow {
+  display: flex;
+  flex-direction: row;
 }
 
 .button {
@@ -135,10 +139,7 @@ input {
 
 #modal {
   z-index: 101;
-  position: fixed;
-  top: 33%;
-  left: 25%;
-  width: 50;
+  background: red;
 }
 
 #shade {
@@ -151,6 +152,8 @@ input {
   background: silver:
   opacity: 0.5;
   filter: alpha(opacity=50);
+  align-items: center;
+  justify-content: center;
 }
 
 

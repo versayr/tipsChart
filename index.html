@@ -16,28 +16,15 @@
 
 <header>
   <h1>Tips Chart Generator</h1>
+  <div id="buttons">
+    <a href="#" id="weekInfo" class="button">Enter Week Info</a>
+    <a href="#" id="newEmployee" class="button">Add An Employee</a>
+    <a href="#" id="printChart" class="button">printChart</a>
+    <a href="#" id="chartNotes" class="button">Crew Notes</a>
+  </div>
 </header>
 
 <div id="main">
-
-  <div id="prompts">
-
-    <ul class="notes ">
-      <li><span>Notes For The Team</span></li>
-      <li><input></li>
-    </ul>
-
-    <div id="buttons">
-      <!--
-      <a href="#" id="back" class="button ">Back</a>
-      <a href="#" id="next" class="button">Next</a>
-      <a href="#" id="done" class="button ">Done</a>
-      -->
-      <a href="#" id="weekInfo" class="button">Enter Week Info</a>
-      <a href="#" id="newEmployee" class="button">Add An Employee</a>
-      <a href="#" id="printChart" class="button">printChart</a>
-    </div>
-  </div>
 
   <div id="tipsChart">
     <div class="titleRow">
@@ -49,22 +36,22 @@
     </div>
   </div>
 
-</div>
+  <div id="shade">
+    <div id="modal">
+      <ul class="memberInfo">
+        <li><span>First Name</span></li>
+        <li><input></li>
+        <li><span>Last Name</span></li>
+        <li><input></li>
+        <li><span>Hours Worked</span></li>
+        <li><input></li>
+        <li><a href="#" id="submit" class="button">Submit</a></li>
+        <li><a href="#" id="closeModal" class="button">X</a></li>
+      </ul>
+    </div>
+  </div>
 
-<div id="shade"></div>
-<div id="modal">
-  <ul class="memberInfo">
-    <li><span>First Name</span></li>
-    <li><input></li>
-    <li><span>Last Name</span></li>
-    <li><input></li>
-    <li><span>Hours Worked</span></li>
-    <li><input></li>
-    <li><a href="#" id="submit" class="button">Submit</a></li>
-    <li><a href="#" id="closeModal" class="button">X</a></li>
-  </ul>
 </div>
-
 <!--
 THIS MESS IS  FOR CHART INFO
 INSERT IT INTO THE MODAL ONCE THAT'S WORKING WELL

@@ -11,7 +11,7 @@ var tips = 150.00
 
 function openModal() {
   $('#modal').css('display', 'block');
-  $('#shade').css('display', 'block');
+  $('#shade').css('display', 'flex');
 };
 
 function closeModal() {
