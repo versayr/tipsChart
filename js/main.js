@@ -9,9 +9,15 @@ var tips = 150.00
 // - Last
 // Hours Worked
 
-function newEmployee() {
+function openModal() {
   $('#modal').css('display', 'block');
   $('#shade').css('display', 'block');
+};
+
+function closeModal() {
+  // Remove the contents of the modal <div>
+  $('#modal').css('display', 'none');
+  $('#shade').css('display', 'none');
 };
 
 function printChart() {
@@ -38,11 +44,25 @@ function howManyDays(month) {
 };
 
 $(document).ready(function() {
+  $('.button#weekInfo').click(function() {
+    // Insert the week info form into the modal
+    openModal();
+  });
   $('.button#newEmployee').click(function() {
-    newEmployee();
+    // Insert the employee info form into the modal <div>
+    openModal();
   });
   $('.button#printChart').click(function() {
     printChart();
+  });
+  $('.button#submit').click(function() {
+    // PUSH AN OBJECT WITH EMPLOYEE INFO INTO employees[]
+    // Reset inputs in the modal
+    closeModal();
+  });
+  $('.button#closeModal').click(function() {
+    // Reset inputs in the modal
+    closeModal();
   });
   // $('.button#next').click(function() {
 
