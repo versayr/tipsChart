@@ -28,11 +28,21 @@ function printChart() {
   p = null;
   for (i = 0; i < employees.length; i++) {
     $('#tipsChart').append('<div class="employeeRow">' +
+        '<div>' +
         '<span>' + employees[i].firstName + '</span>' +
+        '</div>' +
+        '<div>' +
         '<span>' + employees[i].lastName + '</span>' +
+        '</div>' +
+        '<div>' +
         '<span>' + employees[i].hours + '</span>' +
+        '</div>' +
+        '<div>' +
         '<span>' + '$' + tips + '</span>' +
+        '</div>' +
+        '<div>' +
         '<span>     </span>' +
+        '</div>' +
         '</div>');
   };
 };

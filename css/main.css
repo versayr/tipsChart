@@ -111,13 +111,12 @@ ul {
   background: #5668c7;
 }
 
-#titleRow {
+#tipsChart div {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
-#titleRow div {
+#tipsChart div div {
   width: 20%;
 }
 
