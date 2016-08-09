@@ -103,8 +103,8 @@ ul {
 
 #tipsChart {
   width: 700px;
-  height: 500px;
   display: flex;
+  min-height: 300px;
   flex-direction: column;
   border: none;
   padding: 5px;
@@ -120,12 +120,17 @@ ul {
   width: 20%;
 }
 
+#buttons {
+  background: black;
+  display: flex;
+}
+
 .button {
   text-decoration: none;
   color: black;
   padding: 4px;
   background: #386647;
-  border-bottom: 4px solid grey;
+  border-left: 1px solid black;
   transition: border 0.3s;
   width: 100px;
 }
@@ -143,7 +148,13 @@ input {
 
 #modal {
   z-index: 101;
-  background: red;
+  color: white;
+  background: black;
+  padding: 10px;
+}
+
+#modalButtons {
+  display: flex;
 }
 
 #shade {
