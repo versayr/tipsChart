@@ -21,8 +21,9 @@ function closeModal() {
 };
 
 function printChart() {
-  var p;
+  var p,n;
   p = $('.titleRow').detach();
+  n = $('.totalRow').detach();
   $('#tipsChart').empty();
   p.appendTo('#tipsChart');
   p = null;
@@ -45,6 +46,8 @@ function printChart() {
         '</div>' +
         '</div>');
   };
+  n.appendTo('#tipsChart');
+  n = null;
 };
 
 // A function that takes a month and gives a number of days to put in the
