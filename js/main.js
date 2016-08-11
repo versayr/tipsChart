@@ -11,13 +11,13 @@ var tips = 150.00
 
 function openModal() {
   $('#modal').css('display', 'block');
-  $('#shade').css('display', 'flex');
+  $('#shade').addClass('shadeActive');
 };
 
 function closeModal() {
   // Remove the contents of the modal <div>
   $('#modal').css('display', 'none');
-  $('#shade').css('display', 'none');
+  $('#shade').removeClass('shadeActive');
 };
 
 function printChart() {
