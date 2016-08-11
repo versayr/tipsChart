@@ -146,8 +146,31 @@ input {
   width: 100%;
 }
 
-#shade, #modal {
+#shade, #modal, #modalContainer {
   display: none;
+}
+
+#shade {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+#modalContainer {
+  z-index: 101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 #modal {
@@ -161,22 +184,12 @@ input {
   display: flex;
 }
 
-#shade {
-  display: none;
-  z-index: 100;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+#modalButtons .button:hover {
+  border-bottom: none;
 }
 
 .shadeActive {
   display: flex;
-  background: black;
-  opacity: 0.5;
 }
 
 
