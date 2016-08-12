@@ -1,13 +1,20 @@
 var range = undefined;
 var quantity = undefined;
-var employees = [{firstName: 'Martha', lastName: 'Griem', hours: 38.52},{firstName: 'Bruce', lastName: 'Manning', hours: 55.12}];
-var tips = 150.00
+var employees = [];
+var tips = 150;
+var tipSum = undefined;
 
 // an employee will be an object containing:
 // Name
 // - First
 // - Last
 // Hours Worked
+
+function Employee(firstName, lastName, hoursWorked) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.hoursWorked = hoursWorked;
+};
 
 function openModal() {
   $('#modal').css('display', 'block');
@@ -22,13 +29,23 @@ function closeModal() {
   $('#modalContainer').css('display', 'none');
 };
 
+function calculateTips() {
+
+};
+
 function printChart() {
+  // Saves the title and total row, so the chart can be wiped clean, filled,
+  // and then the title and total rows are replaced
   var p,n;
   p = $('.titleRow').detach();
   n = $('.totalRow').detach();
+  // Empties the chart
   $('#tipsChart').empty();
   p.appendTo('#tipsChart');
   p = null;
+
+  // Prints lines in the chart with a loop grabbing info from each employee in
+  // the employees[] array.
   for (i = 0; i < employees.length; i++) {
     $('#tipsChart').append('<div class="employeeRow">' +
         '<div>' +
@@ -38,7 +55,7 @@ function printChart() {
         '<span>' + employees[i].lastName + '</span>' +
         '</div>' +
         '<div>' +
-        '<span>' + employees[i].hours + '</span>' +
+        '<span>' + employees[i].hoursWorked + '</span>' +
         '</div>' +
         '<div>' +
         '<span>' + '$' + tips + '</span>' +
@@ -48,8 +65,14 @@ function printChart() {
         '</div>' +
         '</div>');
   };
+
+  // Replaces the total row at the end of the chart
   n.appendTo('#tipsChart');
   n = null;
+
+  // Prints the sum of all the distributed tips
+  // THIS SHOULD BE LESS THAN OR EQUAL TO THE TIPS POOL
+  $('.totalRow #totalTips').text('$' + tipsSum);
 };
 
 // A function that takes a month and gives a number of days to put in the
@@ -68,14 +91,21 @@ $(document).ready(function() {
     openModal();
   });
   $('.button#printChart').click(function() {
+    calculateTips();
     printChart();
   });
   $('.button#submit').click(function() {
     // PUSH AN OBJECT WITH EMPLOYEE INFO INTO employees[]
     // Reset inputs in the modal
+
     var firstName = $('input.firstName').val();
     var lastName = $('input.lastName').val();
     var hoursWorked = $('input.hoursWorked').val();
+
+    var p = new Employee(firstName, lastName, hoursWorked);
+    employees.push(p);
+    p = null;
+
     console.log(firstName + ' ' + lastName + ' worked ' + hoursWorked + ' hours.');
     closeModal();
   });
