@@ -180,6 +180,10 @@ input {
   padding: 10px;
 }
 
+#modal input {
+  color: black;
+}
+
 #modalButtons {
   display: flex;
 }

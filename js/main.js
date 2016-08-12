@@ -73,6 +73,10 @@ $(document).ready(function() {
   $('.button#submit').click(function() {
     // PUSH AN OBJECT WITH EMPLOYEE INFO INTO employees[]
     // Reset inputs in the modal
+    var firstName = $('input.firstName').val();
+    var lastName = $('input.lastName').val();
+    var hoursWorked = $('input.hoursWorked').val();
+    console.log(firstName + ' ' + lastName + ' worked ' + hoursWorked + ' hours.');
     closeModal();
   });
   $('.button#closeModal').click(function() {
