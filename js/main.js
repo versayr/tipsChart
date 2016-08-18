@@ -16,6 +16,14 @@ function Employee(firstName, lastName, hoursWorked) {
   this.hoursWorked = hoursWorked;
 };
 
+function setModal() {
+  // This function inserts the HTML associated with a certain modal function
+  // into the #modal <div> and sets the buttons in the modal to do the relevant
+  // things when clicked
+  // A BETTER SOLUTION MAY BE TO MAKE SEVERAL MODALS AND HAVE CLASS-BASED 
+  // ACCESS/FUNCTIONS TO USE THEM? IDK
+};
+
 function openModal() {
   $('#modal').css('display', 'block');
   $('#shade').css('display', 'block');
@@ -30,7 +38,13 @@ function closeModal() {
 };
 
 function calculateTips() {
-
+  for (i = 0; i < employees.length; i++) {
+    console.log(i);
+  };
+  // Loop through the employees array, adding the hours up, then dividing the
+  // tips pool by the total hours worked
+  // Spits out the tips/hours number
+  // Adds a tipsEarned value to each employee in the array
 };
 
 function printChart() {
@@ -84,15 +98,23 @@ function howManyDays(month) {
 $(document).ready(function() {
   $('.button#weekInfo').click(function() {
     // Insert the week info form into the modal
-    openModal();
+    setModal('weekInfo');
+    alert('Gotta get the modal to do this one too, idiot!');
+    // openModal();
   });
   $('.button#newEmployee').click(function() {
     // Insert the employee info form into the modal <div>
+    setModal('newEmployee');
     openModal();
   });
   $('.button#printChart').click(function() {
     calculateTips();
     printChart();
+  });
+  $('.button#chartNotes').click(function() {
+    setModal('chartNotes');
+    alert('Gotta get the modal to do this one too, idiot!');
+    // open Modal();
   });
   $('.button#submit').click(function() {
     // PUSH AN OBJECT WITH EMPLOYEE INFO INTO employees[]
