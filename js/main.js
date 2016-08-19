@@ -2,7 +2,7 @@ var range = undefined;
 var quantity = undefined;
 var employees = [];
 var tips = 150;
-var tipSum = undefined;
+var tipSum = 0;
 
 // an employee will be an object containing:
 // Name
@@ -38,8 +38,11 @@ function closeModal() {
 };
 
 function calculateTips() {
+  tipSum = 0;
   for (i = 0; i < employees.length; i++) {
     console.log(i);
+    tipSum = tipSum + employees[i].hoursWorked;
+    console.log(tipSum);
   };
   // Loop through the employees array, adding the hours up, then dividing the
   // tips pool by the total hours worked
@@ -86,7 +89,7 @@ function printChart() {
 
   // Prints the sum of all the distributed tips
   // THIS SHOULD BE LESS THAN OR EQUAL TO THE TIPS POOL
-  $('.totalRow #totalTips').text('$' + tipsSum);
+  $('.totalRow #totalTips').text('$' + tipSum);
 };
 
 // A function that takes a month and gives a number of days to put in the
