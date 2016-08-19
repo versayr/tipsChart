@@ -125,7 +125,7 @@ $(document).ready(function() {
 
     var firstName = $('input.firstName').val();
     var lastName = $('input.lastName').val();
-    var hoursWorked = $('input.hoursWorked').val();
+    var hoursWorked = parseFloat($('input.hoursWorked').val());
 
     var p = new Employee(firstName, lastName, hoursWorked);
     employees.push(p);
