@@ -2,7 +2,7 @@ var range = undefined;
 var quantity = undefined;
 var employees = [];
 var tips = 150;
-var tipSum = 0;
+var tipSum, tipAvg, totalHours = 0;
 
 // an employee will be an object containing:
 // Name
@@ -38,12 +38,16 @@ function closeModal() {
 };
 
 function calculateTips() {
-  tipSum = 0;
+  tipSum = 1000;
+  tipAvg = 0;
+  totalHours = 0;
   for (i = 0; i < employees.length; i++) {
     console.log(i);
-    tipSum = tipSum + employees[i].hoursWorked;
-    console.log(tipSum);
+    totalHours = totalHours + employees[i].hoursWorked;
+    console.log(totalHours);
   };
+  tipAvg = tipSum / totalHours;
+  console.log(tipAvg);
   // Loop through the employees array, adding the hours up, then dividing the
   // tips pool by the total hours worked
   // Spits out the tips/hours number
@@ -64,6 +68,7 @@ function printChart() {
   // Prints lines in the chart with a loop grabbing info from each employee in
   // the employees[] array.
   for (i = 0; i < employees.length; i++) {
+    var tipsEarned = employees[i].hoursWorked * tipAvg;
     $('#tipsChart').append('<div class="employeeRow">' +
         '<div>' +
         '<span>' + employees[i].firstName + '</span>' +
@@ -75,7 +80,7 @@ function printChart() {
         '<span>' + employees[i].hoursWorked + '</span>' +
         '</div>' +
         '<div>' +
-        '<span>' + '$' + tips + '</span>' +
+        '<span>' + '$' + Math.floor(tipsEarned) + '</span>' +
         '</div>' +
         '<div>' +
         '<span>     </span>' +
