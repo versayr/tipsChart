@@ -1,8 +1,8 @@
 var range = undefined;
 var quantity = undefined;
 var employees = [];
-var tips = 150;
-var tipSum, tipAvg, totalHours = 0;
+var tipSum = 1000;
+var tipAvg, totalHours = 0;
 
 // an employee will be an object containing:
 // Name
@@ -38,7 +38,6 @@ function closeModal() {
 };
 
 function calculateTips() {
-  tipSum = 1000;
   tipAvg = 0;
   totalHours = 0;
   for (i = 0; i < employees.length; i++) {
@@ -57,7 +56,7 @@ function calculateTips() {
 function printChart() {
   // Saves the title and total row, so the chart can be wiped clean, filled,
   // and then the title and total rows are replaced
-  var p,n;
+  var p,n,roundedTipSum,tipsEarned;
   p = $('.titleRow').detach();
   n = $('.totalRow').detach();
   // Empties the chart
@@ -68,7 +67,9 @@ function printChart() {
   // Prints lines in the chart with a loop grabbing info from each employee in
   // the employees[] array.
   for (i = 0; i < employees.length; i++) {
-    var tipsEarned = employees[i].hoursWorked * tipAvg;
+    roundedTipSum = 0;
+    tipsEarned = 0;
+    tipsEarned = employees[i].hoursWorked * tipAvg;
     $('#tipsChart').append('<div class="employeeRow">' +
         '<div>' +
         '<span>' + employees[i].firstName + '</span>' +
@@ -86,6 +87,8 @@ function printChart() {
         '<span>     </span>' +
         '</div>' +
         '</div>');
+    roundedTipSum = roundedTipSum + Math.floor(tipsEarned);
+    console.log(roundedTipSum);
   };
 
   // Replaces the total row at the end of the chart
@@ -94,7 +97,7 @@ function printChart() {
 
   // Prints the sum of all the distributed tips
   // THIS SHOULD BE LESS THAN OR EQUAL TO THE TIPS POOL
-  $('.totalRow #totalTips').text('$' + tipSum);
+  $('.totalRow #totalTips').text('$' + roundedTipSum);
 };
 
 // A function that takes a month and gives a number of days to put in the
