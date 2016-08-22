@@ -41,12 +41,9 @@ function calculateTips() {
   tipAvg = 0;
   totalHours = 0;
   for (i = 0; i < employees.length; i++) {
-    console.log(i);
     totalHours = totalHours + employees[i].hoursWorked;
-    console.log(totalHours);
   };
   tipAvg = tipSum / totalHours;
-  console.log(tipAvg);
   // Loop through the employees array, adding the hours up, then dividing the
   // tips pool by the total hours worked
   // Spits out the tips/hours number
@@ -88,7 +85,6 @@ function printChart() {
         '</div>' +
         '</div>');
     roundedTipSum = roundedTipSum + Math.floor(tipsEarned);
-    console.log(roundedTipSum);
   };
 
   // Replaces the total row at the end of the chart
@@ -139,7 +135,6 @@ $(document).ready(function() {
     employees.push(p);
     p = null;
 
-    console.log(firstName + ' ' + lastName + ' worked ' + hoursWorked + ' hours.');
     closeModal();
   });
   $('.button#closeModal').click(function() {
