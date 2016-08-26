@@ -85,7 +85,6 @@ function printChart() {
         '</div>' +
         '</div>');
     roundedTipSum = roundedTipSum + Math.floor(tipsEarned);
-    console.log(roundedTipSum);
   };
 
   // Replaces the total row at the end of the chart
@@ -143,7 +142,6 @@ $(document).ready(function() {
     closeModal();
   });
   $('#shade').click(function() {
-    console.log('Shade was clicked, should close the modal.');
     closeModal();
   });
   // $('.button#next').click(function() {

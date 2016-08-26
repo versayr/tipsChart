@@ -106,7 +106,6 @@ ul {
   display: flex;
   min-height: 300px;
   flex-direction: column;
-  justify-content: space-between;
   border: none;
   padding: 5px;
   background: #5668c7;
