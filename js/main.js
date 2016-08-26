@@ -142,6 +142,10 @@ $(document).ready(function() {
     // Reset inputs in the modal
     closeModal();
   });
+  $('#shade').click(function() {
+    console.log('Shade was clicked, should close the modal.');
+    closeModal();
+  });
   // $('.button#next').click(function() {
 
   // Maybe look at the selector that isn't hidden?
