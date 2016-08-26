@@ -53,7 +53,8 @@ function calculateTips() {
 function printChart() {
   // Saves the title and total row, so the chart can be wiped clean, filled,
   // and then the title and total rows are replaced
-  var p,n,roundedTipSum,tipsEarned;
+  var p,n,tipsEarned;
+  var roundedTipSum = 0;
   p = $('.titleRow').detach();
   n = $('.totalRow').detach();
   // Empties the chart
@@ -64,7 +65,6 @@ function printChart() {
   // Prints lines in the chart with a loop grabbing info from each employee in
   // the employees[] array.
   for (i = 0; i < employees.length; i++) {
-    roundedTipSum = 0;
     tipsEarned = 0;
     tipsEarned = employees[i].hoursWorked * tipAvg;
     $('#tipsChart').append('<div class="employeeRow">' +
@@ -85,6 +85,7 @@ function printChart() {
         '</div>' +
         '</div>');
     roundedTipSum = roundedTipSum + Math.floor(tipsEarned);
+    console.log(roundedTipSum);
   };
 
   // Replaces the total row at the end of the chart
